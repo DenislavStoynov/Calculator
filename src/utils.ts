@@ -1,0 +1,1 @@
+export const rows = [{ id: 1, rowOperators: ['AC', '+/-', '%', '÷'] }, { id: 2, rowOperators: ['7', '8', '9', 'x'] }, { id: 3, rowOperators: ['4', '5', '6', '-'] }, { id: 4, rowOperators: ['1', '2', '3', '+'] }, { id: 5, rowOperators: ['0', ',', '='] }];
