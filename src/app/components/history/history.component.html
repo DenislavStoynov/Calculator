@@ -1,7 +1,9 @@
 <div class="history">
   @if(historyService.history().length) {
   <h3>Last 5 calculations</h3>
-  } @for(entry of historyService.history(); track entry.id) {
+  } @for(entry of
+  historyService.history().slice(historyService.history().length-5,historyService.history().length);
+  track entry.id) {
   <div class="item">
     <span>{{ entry.entry }}</span>
   </div>

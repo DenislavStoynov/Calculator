@@ -45,6 +45,8 @@ export class AppComponent {
   }
 
   insertNumber(op: string) {
+    if (this.currentResult.length >= 14) return;
+
     if (this.result === '0') {
       this.result = op;
     } else if (this.operator && !this.currentResult) {
