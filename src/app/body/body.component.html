@@ -1,0 +1,16 @@
+<div class="display">{{ result }}</div>
+
+@for(row of rows; track row.id) {
+<div class="row">
+  @for(operator of row.rowOperators; track operator; let last = $last) {
+  <button
+    class="btn"
+    [class.orange]="last"
+    [class.wide]="operator === '0'"
+    (click)="handleCalculate(operator)"
+  >
+    {{ operator }}
+  </button>
+  }
+</div>
+}

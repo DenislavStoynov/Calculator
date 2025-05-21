@@ -1,19 +1,18 @@
 import { Component } from '@angular/core';
-import { rows } from '../utils';
 import { HeaderComponent } from "./header/header.component";
+import { BodyComponent } from "./body/body.component";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [HeaderComponent]
+  imports: [HeaderComponent, BodyComponent]
 })
 export class AppComponent {
   result = '0';
   currentResult = '';
   operator = '';
   previousResult = '';
-  rows = rows;
 
   reset() {
     this.result = '0';

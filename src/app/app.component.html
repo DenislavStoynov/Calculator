@@ -1,20 +1,7 @@
 <div class="calculator">
-  <app-header></app-header>
-
-  <div class="display">{{ result }}</div>
-
-  @for(row of rows; track row.id) {
-  <div class="row">
-    @for(operator of row.rowOperators; track operator; let last = $last) {
-    <button
-      class="btn"
-      [class.orange]="last"
-      [class.wide]="operator === '0'"
-      (click)="calculate(operator)"
-    >
-      {{ operator }}
-    </button>
-    }
-  </div>
-  }
+  <calculator-header></calculator-header>
+  <calculator-body
+    [result]="result"
+    (onCalculate)="calculate($event)"
+  ></calculator-body>
 </div>
