@@ -41,7 +41,9 @@ export class AppComponent {
   }
 
   percent() {
-    this.result = (Number(this.result) / 100).toString();
+    const res = (Number(this.result) / 100);
+    this.historyService.addEntry(`${this.result} % = ${res}`)
+    this.result = res.toString();
   }
 
   insertNumber(op: string) {
