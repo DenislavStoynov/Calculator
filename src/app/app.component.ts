@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { rows } from '../utils';
+import { HeaderComponent } from "./header/header.component";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrl: './app.component.css',
+  imports: [HeaderComponent]
 })
 export class AppComponent {
   result = '0';
