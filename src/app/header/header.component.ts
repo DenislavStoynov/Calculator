@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
 
 @Component({
     selector: 'calculator-header',
@@ -7,5 +7,10 @@ import { Component } from "@angular/core";
 })
 
 export class HeaderComponent {
-    classes = ['close', 'minimize', 'maximize']
+    @Output() toggle = new EventEmitter<void>();
+    classes = ['close', 'minimize', 'maximize'];
+
+    toggleBodyVisibility() {
+        this.toggle.emit();
+    }
 }

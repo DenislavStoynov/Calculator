@@ -1,10 +1,17 @@
-.calculator-header {
-  background: #555;
-  height: 20px;
+.calculator-header,
+.calculator-header div {
   display: flex;
-  justify-content: flex-start;
+}
+
+.calculator-header {
+  justify-content: space-between;
   align-items: center;
+  height: 20px;
   padding: 5px 10px;
+  background: #555;
+}
+
+.calculator-header div {
   gap: 5px;
 }
 
@@ -22,4 +29,9 @@
 }
 .maximize {
   background: #28c840;
+}
+
+.clock {
+  color: #fff;
+  cursor: pointer;
 }

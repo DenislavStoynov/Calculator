@@ -1,18 +1,24 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from "./header/header.component";
 import { BodyComponent } from "./body/body.component";
+import { HistoryComponent } from './history/history.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [HeaderComponent, BodyComponent]
+  imports: [HeaderComponent, BodyComponent, HistoryComponent]
 })
 export class AppComponent {
   result = '0';
   currentResult = '';
   operator = '';
   previousResult = '';
+  isBodyOn = true;
+
+  toggleBody() {
+    this.isBodyOn = !this.isBodyOn;
+  }
 
   reset() {
     this.result = '0';

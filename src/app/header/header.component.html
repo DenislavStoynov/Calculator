@@ -1,5 +1,8 @@
 <div class="calculator-header">
-  @for(c of classes; track c) {
-  <div class="circle" [class]="c"></div>
-  }
+  <div>
+    @for(c of classes; track c) {
+    <div class="circle" [class]="c"></div>
+    }
+  </div>
+  <i class="fa-regular fa-clock clock" (click)="toggleBodyVisibility()"></i>
 </div>
