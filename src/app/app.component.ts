@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from "./header/header.component";
-import { BodyComponent } from "./body/body.component";
-import { HistoryComponent } from './history/history.component';
+import { HeaderComponent } from "./components/header/header.component";
+import { BodyComponent } from "./components/body/body.component";
+import { HistoryComponent } from './components/history/history.component';
+import { CalculatorHistoryService } from './services/calculator-history.service';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,8 @@ export class AppComponent {
   operator = '';
   previousResult = '';
   isBodyOn = true;
+
+  constructor(public historyService: CalculatorHistoryService) { }
 
   toggleBody() {
     this.isBodyOn = !this.isBodyOn;
@@ -83,6 +86,7 @@ export class AppComponent {
         return;
     }
 
+    this.historyService.addEntry(`${firstNum} ${this.operator} ${secondNum} = ${this.result}`)
     this.previousResult = '';
     this.currentResult = '';
     this.operator = '';

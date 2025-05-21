@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { rows } from '../../utils';
+import { rows } from '../../../utils';
 
 @Component({
   selector: 'calculator-body',

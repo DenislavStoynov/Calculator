@@ -1,0 +1,11 @@
+<div class="history">
+  @if(historyService.history().length) {
+  <h3>Last 5 calculations</h3>
+  } @for(entry of historyService.history(); track entry.id) {
+  <div class="item">
+    <span>{{ entry.entry }}</span>
+  </div>
+  }@empty {
+  <h4>No history yet.</h4>
+  }
+</div>
