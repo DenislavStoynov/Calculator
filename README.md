@@ -1,6 +1,8 @@
 # Calculator
 Node version - 22.12.0
 
+NOTE: The commits in this repository appear under my other GitHub account because of unexpected switch of SSH keys.
+
 ## Setup
 - npm install (instal dependencies)
 - ng serve (start dev server)
