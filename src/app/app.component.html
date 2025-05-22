@@ -1,2 +1,9 @@
 <app-navigation></app-navigation>
+<h1 *ngIf="isHomeRoute()">MacOs Calculator</h1>
+<p *ngIf="isHomeRoute()">
+  Navigate to 'Calculator' to open the defaul portrait MacOs calculator
+</p>
+<p *ngIf="isHomeRoute()">
+  Manage your calculation history through 'History Manager'
+</p>
 <router-outlet />
