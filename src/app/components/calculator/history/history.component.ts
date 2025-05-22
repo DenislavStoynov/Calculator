@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CalculatorHistoryService } from '../../services/calculator-history.service';
+import { CalculatorHistoryService } from '../../../services/calculator-history.service';
 
 @Component({
   selector: 'calculator-history',

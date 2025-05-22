@@ -1,0 +1,8 @@
+.calculator {
+  max-width: 320px;
+  margin: calc((100vh - 460px) / 2) auto;
+  border-radius: 10px;
+  background: #333;
+  box-shadow: 0 0 10px #000;
+  overflow: hidden;
+}

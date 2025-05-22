@@ -1,0 +1,29 @@
+nav {
+  /* I make it 'absolute' in order to avoid the vertical scroll due to the height of the element */
+  width: 96vw;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: end;
+}
+
+ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+    nav {
+        justify-content: center;
+    }
+}

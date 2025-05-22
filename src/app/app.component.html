@@ -1,11 +1,2 @@
-<div class="calculator">
-  <calculator-header (toggle)="toggleBody()"></calculator-header>
-  @if (isBodyOn) {
-  <calculator-body
-    [result]="result"
-    (onCalculate)="calculate($event)"
-  ></calculator-body>
-  } @else {
-  <calculator-history></calculator-history>
-  }
-</div>
+<app-navigation></app-navigation>
+<router-outlet />
