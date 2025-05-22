@@ -1,1 +1,14 @@
-<p>manager works!</p>
+<div class="history-manager">
+  @if(historyService.history().length) {
+  <h2 class="manage-header">Manage your history calculations</h2>
+  } @for(entry of
+  historyService.history();
+  track entry.id) {
+  <div class="item">
+    <span>{{ entry.entry }}</span>
+    <div (click)="historyService.removeEntry(entry.id)">X</div>
+  </div>
+  }@empty {
+  <h2>No history yet.</h2>
+  }
+</div>
