@@ -1,4 +1,5 @@
 # Calculator
+Node version - 22.12.0
 
 ## Setup
 - npm install (instal dependencies)
